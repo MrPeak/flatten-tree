@@ -8,7 +8,6 @@ Transforms a nested tree structure into a flat list, **each item has it's childr
 [![devDependency Status](https://david-dm.org/MrPeak/flatten-tree/dev-status.svg)](https://david-dm.org/jweidler/flatten-tree#info=devDependencies)
 [![Build Status](https://api.travis-ci.org/MrPeak/flatten-tree.svg?branch=master)](https://travis-ci.org/travis-ci/travis-web)
 
-
 ## Installation
 
 ```bash
