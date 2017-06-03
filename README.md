@@ -83,11 +83,10 @@ const tree = [
     }
 ];
 
-const options = {
-    initNode: node => node[0], // <= default, consider node => _.clone(node) to avoid mutating the tree
-};
-
-const list = treeFlatter(tree, 'children', options);ÏÏÏÏÏ
+const list = treeFlatter(tree, , {
+    idKey: 'objectID',
+    itemsKey: 'layers',
+);
 ```
 
 Results in:
