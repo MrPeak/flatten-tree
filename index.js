@@ -1,5 +1,7 @@
 'use strict';
 
+const _ = require('lodash');
+
 /**
  * Recursive node
  *
@@ -58,6 +60,8 @@ function flattenNodeGenerator(node, parent, index, settings, stack) {
 const flatten = function(tree, options) {
   let list = [];
   const stack = [];
+  console.log(tree);
+  const _tree = _.cloneDeep(tree);
   const settings = {
     initNode: options.initNode || (node => node),
     itemsKey: options.itemsKey || 'children',
@@ -67,12 +71,12 @@ const flatten = function(tree, options) {
       (() => settings.uniqueIdStart++),
   };
 
-  if (Array.isArray(tree) && tree.length) {
+  if (Array.isArray(_tree) && _tree.length) {
     // Object Array
-    for (let i = 0, len = tree.length; i < len; i++) {
+    for (let i = 0, len = _tree.length; i < len; i++) {
       stack.push(
         flattenNodeGenerator(
-          tree[i],
+          _tree[i],
           'root', // placeholder
           i,
           settings,
@@ -82,7 +86,7 @@ const flatten = function(tree, options) {
     }
   } else {
     // One object tree
-    stack.push(flattenNodeGenerator(tree, 'root', 0, settings, stack));
+    stack.push(flattenNodeGenerator(_tree, 'root', 0, settings, stack));
   }
 
   while (stack.length) {

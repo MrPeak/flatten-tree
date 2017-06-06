@@ -24,5 +24,8 @@
     "chai": "^4.0.1",
     "eslint": "^3.19.0",
     "mocha": "^3.4.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
   }
 }

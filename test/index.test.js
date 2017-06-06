@@ -73,7 +73,7 @@ describe('Flatten tree', function() {
     let node = treeNode;
     let i;
 
-    for (i = 0; i < 10000; i++) {
+    for (i = 0; i < 100; i++) {
       node = generateChildren(node);
 
       if (i === 0) {
