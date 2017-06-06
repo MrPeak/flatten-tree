@@ -1,6 +1,6 @@
 {
   "name": "tree-flatter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Transforms a nested tree structure into a flat list, each item has it's children reference and parent reference.",
   "main": "index.js",
   "directories": {
