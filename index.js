@@ -60,7 +60,6 @@ function flattenNodeGenerator(node, parent, index, settings, stack) {
 const flatten = function(tree, options) {
   let list = [];
   const stack = [];
-  console.log(tree);
   const _tree = _.cloneDeep(tree);
   const settings = {
     initNode: options.initNode || (node => node),
